@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+/*inicio navegador*/
+body{
+    background-color: #ffffff;
+}
+
+header{
+    background-color: #1E5128;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 55px;
+}
+
+.logo h1{
+    color: #fff;
+}
+
+.nav{
+    display: flex;
+}
+
+.menu{
+    padding: 21px 12px;
+    list-style-type: none;
+}
+
+.menu a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 6px solid transparent;
+}
+
+.boton{
+    display: flex;
+}
+
+.login{
+    font-size: 15px;
+    padding: 21px 20px;
+    border: none;
+    background-color: #4E9F3D;
+    color: #fff;
+}
+/*cierre navegador*/
+/*inicio hotsale*/
+.main{
+    min-height: calc(100vh - 65px - 220px);
+}
+.main h2{
+    font-size: 28px;
+    text-align: center;
+    color: #4E9F3D;
+    margin: 15px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.sub-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-cards img{
+    box-shadow: 0 0 7px #111;
+    height: 330px;
+    width: 330px;
+    transition: width 2s, height 2s;
+}
+
+.sub-cards h3{
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.sub-cards p{
+    color: #555;
+    margin-top: 5px;
+}
+
+button{
+    font-size: 15px;
+    padding: 18px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4E9F3D;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.sub-cards img:hover{
+    height: 380px;
+    width: 380px;
+}
+
+
+@media screen and (max-width: 1030px){
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 690px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 402px){
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .boton{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 340px){
+    .sub-cards img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+
+/*cierre hotsale*/
+/*inicio news*/
+
+.section-novedades h2{
+    font-size: 28px;
+    text-align: center;
+    color: #4E9F3D;
+    margin: 8px;
+}
+.novedades{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas: 
+    "item5 item5 item7"
+    "item2 item3 item7"
+    "item4 item1 item6"
+    ;
+    grid-gap: 10PX;
+    padding: 13px;
+
+}
+
+.img-item{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sub{
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    background: brown;
+    width: 100%;
+}
+
+.item1{
+    grid-area: item1;
+    position: relative;
+}
+.item2{
+    grid-area: item2;
+    position: relative;
+}
+
+.item3{
+    grid-area: item3;
+    position: relative;
+}
+
+.item4{
+    grid-area: item4;
+    position: relative;
+}
+
+.item5{
+    grid-area: item5;
+    position: relative;
+}
+
+.item6{
+    grid-area: item6;
+    position: relative;
+}
+
+.item7{
+    grid-area: item7;
+    position: relative;
+}
+
+@media screen and (max-width: 690px){
+    .novedades{
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px;
+        grid-template-areas:
+        "item5"
+        "item7"
+        "item2" 
+        "item3"
+        "item4" 
+        "item1"
+        "item6"
+        ;
+    }
+}
+
+/*cierre news*/
+/*inicio sobre nosotros*/
+.contenedor-aboutus{
+    min-height: calc(100vh - 65px - 220px);
+    display: flex;
+    align-items: center;
+}
+
+.informacion-aboutus{
+    margin: 50px;
+}
+
+.informacion-aboutus h2{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.informacion-aboutus p{
+    font-size: 20px;
+}
+
+.imagen-aboutus img{
+    margin: 50px;
+    height: 450px;
+}
+ 
+
+/*cierre sobre nosotros*/
+/*Inicio formulario*/
+.contenedor-formulario{
+    min-height: calc(100vh - 65px - 300px);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin: 90px;
+}
+
+.informacion-formulario h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.informacion-formulario p{
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.informacion-formulario a{
+    margin-bottom: 15px;
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    color: black;
+    font-weight: 700;
+}
+.informacion-formulario a i{
+    color: #4E9F3D;
+    margin-right: 10px;
+}
+
+.campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid green;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+.form textarea{
+    max-width: 930px;
+    min-width: 930px;
+    max-height: 150px;
+    min-height: 140px;
+}
+
+.btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: green;
+    color: #fff;
+    border-radius: 3px;
+}
+/*cierre formulario*/
+/*Inicio footer*/
+footer{
+    background: #1E5128;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contenedor h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.contenedor p{
+    max-width: 500PX;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.links li{
+    margin: 0 10px;
+}
+
+.links a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.links a i{
+    font-size: 1.1rem;
+}
+
+/*cierre footer*/
+
